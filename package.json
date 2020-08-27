@@ -1,0 +1,26 @@
+{
+  "name": "trafficreceiver",
+  "version": "1.0.0",
+  "description": "This is the receiver application from SAP ",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^4",
+    "@sap/hana-client": "^2.5.105",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.2.0"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sql"
+      }
+    }
+  }
+}

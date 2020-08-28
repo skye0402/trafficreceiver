@@ -2,7 +2,7 @@
   "name": "trafficreceiver",
   "version": "1.0.0",
   "description": "This is the receiver application from SAP ",
-  "repository": "<Add your repository here>",
+  "repository": "https://github.com/skye0402/trafficreceiver",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

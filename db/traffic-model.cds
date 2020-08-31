@@ -19,11 +19,11 @@ entity TrafficData {
         directionVerbal         : String(30);
         directionAngle          : Double; 
     }
-}
+};
 
 define view TrafficDataSac as select from TrafficData{
     key TrafficData.sensorId,
-    key TrafficData.timestamp,
+    key ADD_SECONDS('1970-01-01 00:00:00', TrafficData.timestamp /1000) as timestamp: DateTime,
     measures.id, 
     measures.detectionOccurences, 
     measures.trackingOccurences, 

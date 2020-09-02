@@ -23,7 +23,7 @@ entity TrafficData {
 
 define view TrafficDataSac as select from TrafficData{
     key TrafficData.sensorId,
-    key ADD_SECONDS('1970-01-01 00:00:00', TrafficData.timestamp /1000) as timestamp: DateTime,
+    key ADD_SECONDS(TO_TIMESTAMP ('1970-01-01 00:00:00'), TrafficData.timestamp / 1000) as timestamp: Timestamp,
     measures.id, 
     measures.detectionOccurences, 
     measures.trackingOccurences, 

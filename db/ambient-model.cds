@@ -16,7 +16,7 @@ entity IoTData {
 
 define view iotDataSac as select from IoTData{
     key IoTData.sensorId,
-    key ADD_SECONDS('1970-01-01 00:00:00', IoTData.timestamp /1000) as timestamp: DateTime,
+    key ADD_SECONDS(TO_TIMESTAMP ('1970-01-01 00:00:00'), IoTData.timestamp / 1000) as timestamp: Timestamp,
     measures.CO2, 
     measures.temperature, 
     measures.humidity
